@@ -19,7 +19,8 @@ while True:
     a= input("문자열을 입력하시오:")
     if a == "ctrl+c":
         break
-test_list = ['one', 'two', 'three']
+
+test_list = ['one', 'two', 'three'] :
 for i in test_list
     print (i)
 
