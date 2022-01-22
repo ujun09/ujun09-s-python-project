@@ -1,0 +1,10 @@
+n = 0
+num = int(input('몇번까지?:'))
+while True :
+    n = n + 1
+    if n%3 != 0 :
+        print(n)
+    else:
+        print('*')
+    if n >= num :
+        break
