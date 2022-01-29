@@ -1,0 +1,118 @@
+n = 0
+num = int(input('몇번까지?:'))
+while True :
+    n = n + 1
+    if n%3 != 0 :
+        print(n)
+    elif n // 3 >= 10 :
+            print('**')
+    elif %3 == 0 :
+        print ('*')
+    else:
+        print('*')
+    if n >= num :
+        break
+
+a = [1, 2, 3]
+print(a[0] + a[2])
+print(a[-2])
+
+a=[1, 2, 3,['a', 'b', 'c']]
+print(a[3])
+print(a[3][0])
+print(a[-1][0])
+
+a = [1, 2,['a', 'b', ['life', 'is']]]
+print(a[2][2][0])
+
+리스트 슬라이싱
+
+a = [1, 2, 3, 4, 5]
+print(a[0:2])
+b = a[:2]
+print(b)
+c = a[2:]
+print(c)
+
+a = [1, 2, 3, ['a', 'b', 'c'], 4, 5]
+print(a[2:5])
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+print(a+b)
+print(a*3)
+print(len(a))
+
+a = [1, 2, 3]
+print(a[2]+"hi")# 안됌
+print(str(a[2])+"hi")
+
+a = [1, 2, 3]
+del a [1:]
+print(a)
+
+a = [1, 2, 3]
+a.append(4)
+print(a)
+
+a = [1, 4, 3, 2]
+print[a]
+a.sort()
+print(a)
+
+a = ['a', 'c', 'b']
+print(a)
+a.reverse()
+print(a)
+
+a = [1, 4, 3, 2]
+print(a)
+a.sort(reverse=True)
+print(a)
+a.sort(reverse=False)
+print(a)
+a.sort()
+print(a)
+
+a = [1, 2, 3]
+a.index(3)# -> 리스트 안에 있는지 없는지에 대한 판단
+print(a)
+
+a = [1, 2, 3]
+a.insert(0, 4)
+print(a)
+
+a = [1, 2, 3, 1, 2, 3]
+a.remove(3)
+print(a)
+
+a = [4, 5, 6]
+a.pop(2)
+print(a)
+
+a = [1, 2, 3, 1]
+print(a.count(1))
+print(a.count(0))
+print(a.count(2))
+
+a = [1, 2, 3]
+print(a)
+a.extend(([4, 5]))
+print(a)
+
+movie = ["spiderman far from home", "spiderman home comming", "spiderman no way home"]
+print(movie)
+movie.append("spiderman verse")
+print(movie)
+del movie[2]
+print(movie)
+movie.remove("spiderman home comming")
+print(movie)
+
+Data = [2, 4, 3, 1, 5, 10, 9]
+Data.sort()
+print(Data)
+Data.sort(reverse=True)
+print(Data)
+Data.sort(reverse=False)
+print(Data)
