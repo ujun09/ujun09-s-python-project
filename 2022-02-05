@@ -1,0 +1,89 @@
+N = int(input())
+a = []
+for i in range(N):
+    b = int(input())
+    a.append(b)
+print(min(a))
+print(max(a))
+
+N = int(input())
+a = []
+for i in range(N):
+    b = int(input())
+    a.append(b)
+mx = a[0]
+mn = a[0]
+for j in range (len(a)):
+    if a[j] > mx:
+        mx = a[j]
+    elif a[j] < mn :
+        mn = a[j]
+print(mn)
+print(mx)
+
+a = int(input())
+l = []
+L = []
+anw = 0
+for i in range(a):
+    b = int(input())
+    l.append(b)
+m = max(l)
+for j in range(len(l)):
+    c = l[j]/m*100
+    L.append(c)
+    anw = sum(L)/len(L)
+print(anw)
+
+t1 = ()
+t2 = (1,)
+t3 = (1, 2,3)
+t4 = 1, 2, 3
+t5 = ('a', 'b', ('ab', 'cd'))
+
+t1 = ('a', 'b','c')
+print(t1)
+t1 = ('b', 'd', 'c')
+
+t1 = (1, 2, 'a', 'b')
+print(t1[0])
+print(t1[3])
+print(t1[1:])
+a = list(t1)
+print(a)
+print(type(a))
+
+t1 = (1, 2, 'a', 'b')
+t2 = (3, 4)
+print(t1+t2)
+print(t2*3)
+print(len(t1))
+
+Sport = {"김연아" : "피겨스케이팅", "류현진" :  "야구", "솜흥민" : "축구"}
+print(Sport)
+print(type(Sport))
+
+a = {1:'hi'}
+a = {'a:[1, 2, 3]'}
+print(a1)
+
+a = {1:'a'}
+print(a)
+a[2] = 'b'
+a['name']='son'
+a[3] = [1, 2, 3]
+print(a)
+del a[1]
+print(a)
+
+grade = {'Son':7, 'kane':10}
+print(grade['Son'])
+print(grade['kane'])
+
+a = {1:'a', 2:'b'}
+print(a[1])
+print(a[2])
+
+a = {'a':1, 'b':2}
+print(a['a'])
+print(a['b'])
