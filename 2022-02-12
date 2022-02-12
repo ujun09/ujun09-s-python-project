@@ -1,0 +1,111 @@
+print('hello world')
+
+print("Mary's cometics")
+
+print('신씨가 외쳤다 "도둑이야"')
+
+print('"C:Window"')
+
+\n : 줄바꾸기
+\t : 띄어쓰기 (TAB)
+
+print("오늘은","일요일")
+
+print('naver;kakao;sk;samsung')
+
+print('naver/kakao/sk/samsung')
+
+print("first",end='') ; print("second")
+
+print(5/3)
+
+삼성전자 = 50000
+총평가금액 = 삼성전자 * 10
+print(총평가금액)
+
+시가총액 = '298조'
+현제가 = '50000'
+per = 15.79
+
+s = 'hello'
+t = 'python'
+print(s + '!' + t)
+
+김태호 박수 빙사 발사 변신 부사 부산 분수 보살 밥사
+
+print(type(124))
+print(type(3.14))
+print(type("abcd"))
+
+num_str = "720"
+print(type(num_str))
+print(type(int(num_str)))
+print(int(num_str)+100)
+
+num = 100
+print(type(num))
+print(type(str(num)))
+print(str(num)+"abcd")
+
+num = "15.79"
+print(type(num))
+print(type(float(num)))
+print(float(num)+1.32)
+
+letter = 'python'
+print(letter[0], letter[2])
+
+license_plate = '24가2210'
+print(license_plate[3:])
+
+string = '홀짝홀짝홀짝'
+print(string[0], string[2], string[4])
+print(string[::2])
+
+string = "PYTHON"
+print(string[::-1])
+
+phone_number = '010-1111-2222'
+print(phone_number.replace("-", " "))
+
+phone_number = '010-1111-2222'
+print(phone_number.replace("-",""))
+
+url = "htpp://sharebook.kr"
+print(url.split(".")[1])
+
+a="hello!, myname is {}, I'm {} years old".format("python", "14")
+print(a)
+
+a = "이름: {} 나이: {} \n이름: {} 나이: {}" .format("김민수", "10", "이철희", "13")
+print(a)
+
+name1 = "김만수"
+age1 = 10
+name2 = "이철희"
+age2 = 13
+a = "이름: {} 나이: {} \n이름: {} 나이: {}" .format(name1, age1, name2, age2)
+print(a)
+
+data = "    삼성전자     "
+print(data.split())\
+
+nums = [1, 2, 3, 4, 5]
+print(sum(nums)/len(nums))
+
+data = [2, 4, 3, 1, 5, 10, 9]
+data.sort()
+print(data)
+
+data = [2, 4, 3, 1, 5, 10, 9]
+data.sort()
+data.reverse()
+print(data)
+
+data = [2, 4, 3, 1, 5, 10, 9]
+data.sort(reverse=True)
+print(data)
+
+bool자료형 (True, False)
+a = 7
+print(a==7)
