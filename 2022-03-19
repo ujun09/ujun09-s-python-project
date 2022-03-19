@@ -1,0 +1,196 @@
+Dan = 2
+b = 5*Dan
+print("5 *", Dan, "=", b)
+
+a = int(input())
+b = int(input())
+print(a,"*", b, "=", a*b)
+print(a, "/", b, "=", a/b)
+
+yard = float(input())
+cm = yard*91.44
+print("%.1fyard = %.3f cm" %(yard, cm))
+
+print("1plus1 = Gwi yo mi")
+print("1 + 1 =", 1+1)
+
+x = float(input("x ="))
+y = float(input("y ="))
+print(x*y)
+
+a = int(input())
+b = int(input())
+c = int(input())
+sum = a+b+c
+avg = sum/3
+print("sum = %d" %sum)
+print("avg = %d" %avg)
+
+a = input()
+b = input()
+c = int(input())
+print(b*c+a)
+
+l = [1, 2]
+a = int(input())
+l.append(a)
+l.reverse()
+print(l[0])
+print(l[1])
+print(l[2])
+
+weight = float(input())
+if weight<=50.80:
+    print("F")
+elif weight<=61.23:
+    print("l")
+elif weight<=72.57:
+    print("m")
+elif weight<=88.45:
+    print("c")
+else:
+    print("h")
+
+a = input()
+b = input()
+print(a + "and" + b)
+print(a + "&" + b)
+
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+a = int(input())
+for i in l[]:
+    print(l)
+
+a = {1 : "개(dog)", 2 : "고양이(cat)", 3 : "병아리(chick)"}
+b = input("Number?")
+if b == 1 or b == 2 or b == 3:
+    print(a[b])
+else:
+    print("I don't know")
+
+l = []
+sum = 0
+avg = 0
+while True :
+    a = int(input())
+    l.append(a)
+    if a >= 100:
+        break
+for i in l:
+    sum += i
+avg = sum / (len(l))
+print(sum)
+print("%.1f"%(avg))
+
+l = []
+b = 0
+c = 0
+for i in range(10):
+    a = int(input())
+    l.append(a)
+for j in l:
+    if j % 3 == 0:
+        b +=1
+for k in l:
+    if k % 5 == 0:
+        c += 1
+print("Multiples of 3 : %d"%(b))
+print("Multiples of 5 : %d"%(c))
+
+a = float(input())
+b = float(input())
+aa = a**(1/2)
+bb = b**(1/2)
+print(aa)
+pritn(bb)
+c = abs(aa-bb)
+if (c%int(c)) >= 0.5:
+    print(int(c) + 1)
+elif (c%int(c)) >= 0:
+    print(int(c)-1)
+else:
+    print(int(c))
+
+l = []
+b = 0
+c = 0
+for i in range(10):
+    a = int(input())
+    l.append(a)
+for j in l:
+    if h % 3 == 0:
+        b += 1
+for k in l:
+    if k %5 == 0:
+        c += 1
+print("Multiples of 3 : %d"%(b))
+print("Multiples of 5 : %d"%(c))
+
+a = float(input())
+b = float(input())
+aa = a**(1/2)
+bb = b**(1/2)
+print(aa)
+print(bb)
+c = abs(aa-bb)
+if (c%int(c)) >=0.5:
+    print(int(c)+1)
+elif (c%int(c)) == 0:
+    print(int(c)-1)
+else:
+    print(int(c))
+
+최대공약수
+a = int(input())
+b = int(input())
+if a > b :
+    min = b
+else:
+    min = a
+for a in range(min+1, 1, -1):
+    if a % i == 0 and b % i == 0:
+        print(i)
+        break
+
+최대공약수를 함수로 바꾼 버전
+def chde(x,y):
+    if x < y:
+        min = x
+    else:
+        min = y
+    for i in range(min+2, 1, -1):
+        if x % i == 0 and y % i == 0:
+            anw = i
+            break
+    return anw
+a = int(input())
+b = int(input())
+print(chde(a,b))
+
+최소공배수
+x = int(input())
+y = int(input())
+if x > y:
+    max = x
+else:
+    max = y
+for i in range(max, (x*y)+1):
+    if i % x == 0 and i % y == 0:
+        anw = i
+        break
+
+최소공배수를 함수로 바꾼 버전
+def choi(x,y):
+    if x > y:
+        max = x
+    else:
+        max = y
+    for i in range(max, (x * y) + 1):
+        if i % x == 0 and i % y == 0:
+            anw = i
+            break
+    return anw
+
+a = int(input())
+b = int(input())
+print(choi(a,b))
