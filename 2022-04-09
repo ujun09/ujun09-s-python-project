@@ -1,0 +1,80 @@
+MyFile = open('practice.txt')
+# 여기 3개 들어갈거임
+MyFile.close()
+
+# read 를 사용하는 경우
+MyFile = open('practice.txt', 'r')
+print(MyFile.read().count("\n")+1)
+MyFile.close()
+
+# readline() 을 사용하는 경우
+# 읽어들일 값이 없을 때까지 count 를 해야함
+MyFile = open('practice.txt', 'r')
+cnt = 0
+while True:
+    if MyFile.readline() == '':
+        break
+    cnt +=1
+print(cnt)
+MyFile.close()
+
+# readlines() 를 사용하는 경우
+MyFile = open('practice.txt', 'r')
+print(len(MyFile.readlines()))
+MyFile.close()
+
+a = int(input())
+b = int(input())
+for x in range(a,b+1):
+    for i in range(1,10):
+        print(x * i)
+
+a = int(input())
+b = int(input())
+if a > b:
+    M = a
+    m = b
+else:
+    m = a
+    M = b
+for x in range(m, M+1):
+    for i in range(1,10):
+        print(x * i)
+
+# 선생님 풀이 (두 수를 띄어 쓰기)
+def googooodan(n):
+    print("==%ddan=="%n)
+    for i in range(1,10):
+        print("%d * %d = %d"%(n, i, n*i))
+    print()
+ # = a = int(input()), b = int(input())
+a, b = map(int, input().split())
+
+for n in range(min(a,b), max(a,b)+1):
+    googooodan(n)
+
+def f():
+    print("@"*10)
+num = ["first", "second", "third"]
+for i in range(3):
+    print(num[i])
+    f()
+
+
+def rect(n):
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            print(i*j, end=' ')
+        print()
+x = int(input())
+rect(x)
+
+# end = '' #줄바꿈을방지하는 코드 (띄어쓰기를 방지하는 코드)
+# ex)
+# a = [1, 2, 3]
+# for i in a:
+#     print(i)
+#
+# a = [1, 2, 3]
+# for i in a:
+#     print(i,end = '')
