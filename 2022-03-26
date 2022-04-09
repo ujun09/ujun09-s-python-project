@@ -1,0 +1,43 @@
+def solution(lottos, win_nums):
+    correct = 0
+    zero = 0
+    for num in lottos:
+        if num == 0:
+            zero += 1
+        elif num in win_nums:
+            correct += 1
+
+    max_score = correct + zero
+    min_score = correct
+
+    lank = {0: 6, 1: 6, 2: 5, 3: 4, 4: 3, 5: 2, 6: 1}
+    answer = [lank[max_score], lank[min_score]]
+    return answer
+
+def count_divisor(n):
+    count = 0
+    for i in range(1, n+1):
+        if n % i == 0:
+            count += 1
+    return count
+
+def solution(left, right):
+    answer = 0
+    for j in range(left, right+1):
+        count = count_divisor(j)
+        if count % 2 == 0:
+            answer += j
+        else :
+            answer -= j
+    return answer
+
+def solution(price, money, count):
+    while True:
+        money -= (price*count)
+        count -= 1
+        if count == 0:
+            break
+    if money < 0:
+        return money*(-1)
+    else:
+        return 0
