@@ -1,0 +1,119 @@
+# #틱택토 게임
+#
+# # 1) 게임 보드판
+# # r = ['*', '*', '*', '*', '*', '*', '*', '*', '*']
+# # def board():
+# #     print(r[0]+"|"+r[1]+'|'+r[2])
+# #     print('-----')
+# #     print(r[3]+"|"+r[4]+'|'+r[5])
+# #     print('-----')
+# #     print(r[6]+"|"+r[7]+'|'+r[8])
+# # board()
+# # 2) 게임에서의 승리 조건
+# # if (r[0] == 'O' and r[1] == 'O' and r[2] == 'O') or (r[3] == 'O' and r[4] == 'O' and r[5] == 'O') or (r[6] == 'O' and r[7] == 'O' and r[8] == 'O'):
+# #     print("Win")
+# # elif (r[0] == 'O' and r[3] == 'O' and r[6] == 'O') or (r[1] == 'O' and r[4] == 'O' and r[7] == 'O') or (r[2] == 'O' and r[5] == 'O' and r[8] == 'O'):
+# #     print("Win")
+# # elif (r[2] == 'O' and r[4] == 'O' and r[6] == 'O') or (r[0] == 'O' and r[4] == 'O' and r[8] == 'O'):
+# #     print("Win")
+# # # 5) 게임에서의 패배 조건
+# # if (r[0] == 'X' and r[1] == 'X' and r[2] == 'X') or (r[3] == 'X' and r[4] == 'X' and r[5] == 'X') or (r[6] == 'X' and r[7] == 'X' and r[8] == 'X'):
+# #     print("Lose")
+# # elif (r[0] == 'X' and r[3] == 'X' and r[6] == 'X') or (r[1] == 'X' and r[4] == 'X' and r[7] == 'X') or (r[2] == 'X' and r[5] == 'X' and r[8] == 'X'):
+# #     print("Lose")
+# # elif (r[2] == 'X' and r[4] == 'X' and r[6] == 'X') or (r[0] == 'X' and r[4] == 'X' and r[8] == 'X'):
+# #     print("Lose")
+# # 4) 게임실행
+# # 보드판 열기
+# # 플레이어 차례
+# # 위치고르기(중복 없이)
+# # 고르게 되면 보드판 등장
+# # 컴퓨터 차례 (랜덤)
+# # 턴을 바꾸어서 진행
+# # 승리조건 충족시 끝
+# # import random -> 랜덤 모듈을 쓰기위해 사용
+# # computer = random.randrange()
+# import random
+# r = ['*', '*', '*', '*', '*', '*', '*', '*', '*']
+# def board():
+#     print(r[0]+"|"+r[1]+'|'+r[2])
+#     print('-----')
+#     print(r[3]+"|"+r[4]+'|'+r[5])
+#     print('-----')
+#     print(r[6]+"|"+r[7]+'|'+r[8])
+#     print( )
+# board()
+# while True:#게임 실행
+#     #플레이어 위치입력
+#     while True:
+#         a = int(input())
+#         if r[a-1] == '*' :
+#             r[a-1] = 'O'
+#             break
+#     board()
+#     #승리조건
+#     if (r[0] == 'O' and r[1] == 'O' and r[2] == 'O') or (r[3] == 'O' and r[4] == 'O' and r[5] == 'O') or (r[6] == 'O' and r[7] == 'O' and r[8] == 'O'):
+#         print("Win")
+#         break
+#     elif (r[0] == 'O' and r[3] == 'O' and r[6] == 'O') or (r[1] == 'O' and r[4] == 'O' and r[7] == 'O') or (r[2] == 'O' and r[5] == 'O' and r[8] == 'O'):
+#         print("Win")
+#         break
+#     elif (r[2] == 'O' and r[4] == 'O' and r[6] == 'O') or (r[0] == 'O' and r[4] == 'O' and r[8] == 'O'):
+#         print("Win")
+#         break
+#     elif (r[0] == 'X' and r[1] == 'X' and r[2] == 'X') or (r[3] == 'X' and r[4] == 'X' and r[5] == 'X') or (r[6] == 'X' and r[7] == 'X' and r[8] == 'X'):
+#         print("Lose")
+#         break
+#     elif (r[0] == 'X' and r[3] == 'X' and r[6] == 'X') or (r[1] == 'X' and r[4] == 'X' and r[7] == 'X') or (r[2] == 'X' and r[5] == 'X' and r[8] == 'X'):
+#         print("Lose")
+#         break
+#     elif (r[2] == 'X' and r[4] == 'X' and r[6] == 'X') or (r[0] == 'X' and r[4] == 'X' and r[8] == 'X'):
+#         print("Lose")
+#         break
+#     elif r[0] != '*' and r[1] != '*' and r[2] != '*' and r[3] != '*' and r[4] != '*' and r[5] != '*' and r[6] != '*' and r[7] != '*' and r[8] != '*':
+#         r[:] = '*', '*', '*', '*', '*', '*', '*', '*', '*'
+#     #컴퓨터 차례
+#     while True:
+#         c = random.randrange(0,8)
+#         if r[c] == '*':
+#             r[c] = 'X'
+#             break
+#     board()
+#     #승리조건확인
+#     if (r[0] == 'O' and r[1] == 'O' and r[2] == 'O') or (r[3] == 'O' and r[4] == 'O' and r[5] == 'O') or (r[6] == 'O' and r[7] == 'O' and r[8] == 'O'):
+#         print("Win")
+#         break
+#     elif (r[0] == 'O' and r[3] == 'O' and r[6] == 'O') or (r[1] == 'O' and r[4] == 'O' and r[7] == 'O') or (r[2] == 'O' and r[5] == 'O' and r[8] == 'O'):
+#         print("Win")
+#         break
+#     elif (r[2] == 'O' and r[4] == 'O' and r[6] == 'O') or (r[0] == 'O' and r[4] == 'O' and r[8] == 'O'):
+#         print("Win")
+#         break
+#     elif (r[0] == 'X' and r[1] == 'X' and r[2] == 'X') or (r[3] == 'X' and r[4] == 'X' and r[5] == 'X') or (r[6] == 'X' and r[7] == 'X' and r[8] == 'X'):
+#         print("Lose")
+#         break
+#     elif (r[0] == 'X' and r[3] == 'X' and r[6] == 'X') or (r[1] == 'X' and r[4] == 'X' and r[7] == 'X') or (r[2] == 'X' and r[5] == 'X' and r[8] == 'X'):
+#         print("Lose")
+#         break
+#     elif (r[2] == 'X' and r[4] == 'X' and r[6] == 'X') or (r[0] == 'X' and r[4] == 'X' and r[8] == 'X'):
+#         print("Lose")
+#         break
+#     elif r[0] != '*' and r[1] != '*' and r[2] != '*' and r[3] != '*' and r[4] != '*' and r[5] != '*' and r[6] != '*' and r[7] != '*' and r[8] != '*' :
+#         r[:] = '*', '*', '*', '*', '*', '*', '*', '*', '*'
+# # 로그인, 로그아웃
+
+f = open('login.txt','r')
+lines = f.readlines()
+print(lines)
+while True:
+    ID = input()
+    PW = input()
+    if ID == lines.split(' ') and PW == lines[4:]:
+        print("Well come" + ID)
+        break
+    elif ID == lines[:3] and PW != lines[4:]:
+        print("Wrong passward")
+    elif ID != lines[:3] and PW == lines[4:]:
+        print("Wrong ID")
+    else:
+        print("Wrong passward and ID")
