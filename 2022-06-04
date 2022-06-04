@@ -12,7 +12,7 @@
 # #최대 재귀 깊이가 1000으로 정해져 있어
 # #--> 종료 조건 필요
 #
-# def hello():
+# def hello(count):
 #     if count == 0:
 #         return
 #
