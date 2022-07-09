@@ -1,0 +1,137 @@
+작은 따음표를 출력하고 싶을 때
+print("I'm learning python")
+print('I\'m learning python')
+큰 따음표를 출력하고 싶을 때
+print('그녀가 물었다. "저기요"')
+print("그녀가 물었다. \"저기요\"")
+
+문자열 슬라이싱
+a = "Hello World"
+print(a[:]) #출력값 => "Hello World"
+print(a[2:5]) #출력값 => "llo"
+print(a[-5:]) #출력값 => "World"
+print(a[::2]) #출력값 => "HloWrd"
+
+문자열 더하기
+a = "Hello"
+b = "World"
+print(a+b) #출력값 => "HelloWorld"
+print(a+ ' '+b+'!') #출력값 => "Hello World
+
+문자열 곱하기
+star = '*'
+print(star * 5) #출력값 => '*****'
+
+문자열 길이 구하기
+a = "Python"
+print(len(a)) #출력값 => 6
+
+a = 'Hello Python'
+print(a.count('o'))#해당 문자가 몇개 존재하는지를 반환
+print(a.find('l'))# l이라는 문자가 처음 나오는 인덱스 번호 반환 단, 없는 문자응 찾을 경우 -1 반환
+print(a.index('l'))# l이라는 문자가 처음 나오는 인덱스 번호 반환 단, 없는 문자를 찾는 경우 에러 발생
+print(a.replace('py','my'))# old문자를 new문자로 바꾸어준다.
+print(a.split())#괄호 안에 있는 문자를 기준으로 문자열을 나누어준다.단 괄호안에 아무것도 쓰지 않을 경우 공백을 기준으로 나누어준다.
+print(a.upper())#소문자를 대문자로
+print(a.lower())# 대문자를 소문자로
+print(','.join(a)) #인덱스 번호 사이사이에 해당 문자를 집어넣어준다.
+print(a.capitalize())#0번째 문자가 대문자로 변경된다.
+print(a.startswith('el')) #해당 문자로 시작하는지를 물어본다. True/False
+print(a.endswith('ton')) # 해당 문자로 끝나는지를 물어본다. True/ False
+print(a.is~)# is로 시작하는 함수들은 물어보는 함수 = True/ False를 반환
+print(a.isalnum()) # a라는 문자가 알파벳 또는 숫자인지를 물어본다.
+a = '123'
+print(a.isalpha()) # a라는 문자가 알파벳인지를 물어본다.
+print(a.isdigit()) #a 라는 문자가 숫자로 이루어져 있는지 물어본다.
+a = '....app.le....'
+
+문자열에서 연속되는 해당 문자를 제거 후 반환
+print('ㅣ',a.lstrip('.'), 'ㅣ', sep ='') #출력값은 ㅣapp.le....ㅣ
+print('ㅣ',a.strip('.'), 'ㅣ', sep ='') #출력값 => ㅣapp.leㅣ
+print('ㅣ',a.rstrip('.'), 'ㅣ', sep ='') #출력값 => ㅣ....app.leㅣ
+
+크로아티아 알파벳 문제
+
+user = input()
+croatia = ['dz=', 'c=','c-','d-','lj','nj','s=','z=']
+
+i = 0
+cnt = 0
+while i < len(user):
+    temp = i
+    for j in range(len(croatia)):
+        if user[i:].find(croatia[j]) == 0:
+            i += len(croatia[j])
+            break
+    if temp == i:
+        i += 1
+    cnt += 1
+
+print(cnt)
+
+다른 방법
+user = input()
+cnt = len(user)
+for i in range(len(user)):
+    if user[i] == '=':
+        if user[i-1] == 'c' or user[i-1] == 's':
+            cnt -=1
+        else:
+            if user[i-1] == 'z':
+                if user[i-2] == 'd':
+                    cnt -= 1
+    elif user[i] == '-':
+        if user [i-1] == 'c' or user[i-1] == 'd':
+            cnt -= 1
+    elif user[i] == 'j':
+        if user[i-1] == 'l' or user[i-1] == 'n':
+            cnt -= 1
+print(cnt)
+
+리스트
+a = [1,2,3,[4,5],6]
+print(a[3][0])# 인덱싱
+print(a[:3])#슬라이싱
+
+
+3->7 수정
+a = [1,2,3,[4,5],6]
+a[2] = 7
+ptint(a)
+
+[4,5] 삭제
+a = [1,2,3,[4,5],6]
+del a[3]
+print(a)
+b = [7,8,9]
+print(a+b)
+print(a)
+
+
+d = {1 : '사과', 2 : '복숭아', 3: '바나나'}
+print(d[1])
+
+수정
+# d = {1 : '사과', 2 : '복숭아', 3: '바나나'}
+d[1] = '레몬'
+
+삭제
+d = {1 : '사과', 2 : '복숭아', 3: '바나나'}
+del d[1]
+print(d)
+
+평균은 넘겠지 문제
+a = int(input('학생 수:'))
+b = input('점수:')
+total=0
+print(b.split(','))
+b= b.split(',')
+for i in b:
+    total+=int(i)
+print(total)
+cnt=0
+average = total/5
+for i in range(a):
+    if int(b[i]) > average:
+       cnt += 1
+print(cnt/a*100)
