@@ -1,0 +1,88 @@
+def bulble_sort(_list:list):
+    for i in range(len(_list)-1):
+        for j in range(len(_list)-1-i):
+          if _list[j] > _list[j+1]:
+                tmp = _list[j]
+               _list[j] = _list[j+1]
+                _list[j+1] = tmp
+# 오름차순 기준
+List_A = [3,7,2,9,1,5,6,4,8]
+bubble_sort(List_A)
+print(List_A)
+
+def Selection_Sort(_list : list):
+    for i in range (len(a)-1):
+        least = i
+        for j in range(i+1,len(_list)):
+            if _list[least] > _list[j]:
+                least = j
+            tmp = _list[i]
+            _list[i] = _list[least]
+            _list[least] = tmp
+List_A = [3,7,2,9,1,5,6,4,8]
+Selection_Sort(List_A)
+print(List_A)
+
+def Insertion_sort(_list:list):
+    for i in range(1,len(_list)):
+        key = _list[i]
+        j = i -1
+        while _list[i] > key and j >= 0 :
+            _list[j+1] = _list[j]
+            j = j - 1
+            _list[j + 1] = key
+    return  _list
+
+def bubble_sort(_list : list, reverse = False):
+    if reverse:
+        for i in range(len(_list) - 1):
+            for j in range(len(_list) - 1 - i):
+                if _list[j] < _list[j + 1]:
+                    tmp = _list[j]
+                    _list[j] = _list[j + 1]
+                    _list[j + 1] = tmp
+
+    else:
+       for i in range(len(_list)-1):
+            for j in range(len(_list)-1-i):
+                if _list[j] > _list[j+1]:
+                    tmp = _list[j]
+                    _list[j] = _list[j+1]
+                    _list[j+1] = tmp
+a = list(input())
+for i in range(len(a)):
+    a[i] = int(a[i])
+bubble_sort(a,reverse=True)
+for i in a:
+    print(i,end='')
+
+def solution(array, commands):
+        i, j, k = [], [], []
+        answer = []
+
+        for x in range(len(commands)):
+                i.append(commands[x][0])
+                j.append(commands[x][1])
+                k.append(commands[x][2])
+
+        for y in range(len(commands)):
+            parts = array[i[y]-1 : j[y]]
+            parts.sort()
+            answer.append(parts[k[y]-1])
+
+def solution(citations):
+    answer = 0
+    citations.sort()
+
+    for h in range(1,len(citations)+1):
+        cnt_h = 0
+        cnt_l = 0
+        for i in citations:
+            if i >= h :
+                cnt_h += 1
+            elif i <= h:
+                cnt_l += 1
+            if cnt_h >= h and cnt_l <= h and answer < h:
+                answer = h
+
+    return answer
