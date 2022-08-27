@@ -1,0 +1,68 @@
+# 성격 유형 검사 하기
+def solution(survey, choices):
+    answer = ''
+    type = {"RT": 0, "CF": 0, "JM": 0, "AM": 0}
+    point = [0, -3, -2, -1, 0, 1, 2, 3]
+    for i in range(len(survey)):
+        if survey[i] not in type:
+            type[survey[i][::-1]] += -point[choices[i]]
+        else:
+            type[survey[i]] += point[choices[i]]
+    for j in type:
+        if type[j] <= 0:
+            answer += j[0]
+        else:
+            answer += j[1]
+
+    return answer
+
+# 난수 만들기
+# 난수 = 랜덤숫자
+import random
+
+# 로또 : 1 ~ 45 사이의 정수값중 6 개를 선택하여 맞춘다 ( 중복 x )
+lotto = []  # 로또 번호를 담아줄 것
+
+while len(lotto) <= 5:
+    answer = random.randint(1,45)  # randomint(x,y) = x 부터 y 까지의 범위에서 랜덤한 정수를 불러오겠다는 선언
+    if answer not in lotto:
+        lotto.append(answer)
+
+# 야구게임
+
+# 규칙 1 : 무작위 정수 3개를 정답으로 선택한다(단, 중복은 없다)
+# 규칙 2 : 매 턴마다 정수 3개를 입력하고 비교한다
+# 규칙 3 : 입력한 수가 존재하며, 자리가 같다면 STRIKE
+#         존재는 하지만 자리가 다르면 BALL
+#         존재하지도 않으면 FOUL
+# 규칙 4 총 10회 안에 문제를 맞춰야 하며, 턴이 0 이 되면 종료
+import random
+
+answer = []
+while len(answer) < 3 :
+    number = random.randint(0,9)
+    if number not in answer:
+        answer.append(number)
+
+cnt = 10
+BALL = 0
+STRIKE = 0
+# 게임 실행
+while True:
+    print("STRIKE : %d"%STRIKE)
+    print("BALL : %d"%BALL)
+    print("남은 기회 : ",cnt)
+    guess = input("3개의 수를 입력하세요(띄어쓰기로 구분) : ").split()
+    for i in range(len(guess)):
+        guess[i]  = int(guess[i])
+    if guess in answer:
+        BALL += 1
+    elif guess not in answer:
+        print("FOUL")
+    elif guess in answer and answer[0] == guess[0] and answer[1] == guess[1] and answer[2] == guess[2]:
+        STRIKE +=1
+        BALL -= 1
+    elif cnt == 0:
+        print("정답은 : ", answer, "\n you lose")
+        exit()
+    cnt -= 1
